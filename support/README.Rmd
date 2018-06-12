@@ -1,0 +1,16 @@
+---
+output: md_document
+---
+
+### Overview of Screenshots
+
+```{r, echo = FALSE, results='asis'}
+img_files = list.files(".", pattern = ".png", recursive = TRUE)
+
+link_to_files = 
+  paste0("[![", basename(img_files), "](", img_files,")](",img_files,")",
+         collapse = "\n\n")
+
+cat(link_to_files)
+```
+
